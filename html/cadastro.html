@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Cadastre-se para participar das ações do Instituto Esperança.">
+
+    <title>Cadastro | Instituto Esperança</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-container">
+
+        <a href="index.html" class="logo" aria-label="Instituto Esperança - página inicial">
+            Instituto Esperança
+        </a>
+
+        <button
+            id="menu-toggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="menu" class="nav" aria-label="Navegação principal">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+            <button id="btn-tema" class="theme-button" type="button">
+                🌙 Modo escuro
+            </button>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="section-tag">Participe</span>
+            <h1>Cadastro</h1>
+            <p>
+                Preencha seus dados para participar das iniciativas
+                do Instituto Esperança.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <form id="cadastro-form" class="form-card" novalidate>
+
+                <div class="form-grid">
+
+                    <div class="form-group form-full">
+                        <label for="nome">Nome completo *</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            autocomplete="name"
+                            required
+                            minlength="3">
+
+                        <small class="error-message" id="erro-nome"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required>
+
+                        <small class="error-message" id="erro-email"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF *</label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            inputmode="numeric"
+                            maxlength="14"
+                            pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                            required>
+
+                        <small class="error-message" id="erro-cpf"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            inputmode="tel"
+                            maxlength="15"
+                            pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}"
+                            required>
+
+                        <small class="error-message" id="erro-telefone"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cep">CEP *</label>
+
+                        <input
+                            type="text"
+                            id="cep"
+                            name="cep"
+                            inputmode="numeric"
+                            maxlength="9"
+                            pattern="\d{5}-?\d{3}"
+                            required>
+
+                        <small class="error-message" id="erro-cep"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado *</label>
+
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+
+                        <small class="error-message" id="erro-estado"></small>
+                    </div>
+
+                    <div class="form-group form-full">
+                        <label for="mensagem">Por que deseja participar?</label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            maxlength="500"></textarea>
+
+                        <small class="error-message" id="erro-mensagem"></small>
+                    </div>
+
+                    <div class="form-group form-full checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="termos"
+                            name="termos"
+                            required>
+
+                        <label for="termos">
+                            Concordo com o uso dos dados para fins
+                            relacionados à participação nas atividades.
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="form-feedback"
+                    class="form-feedback"
+                    role="alert"
+                    aria-live="polite">
+                </div>
+
+                <button type="submit" class="button button-primary">
+                    Enviar cadastro
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div>
+            <h2>Instituto Esperança</h2>
+            <p>Construindo oportunidades através da solidariedade.</p>
+        </div>
+
+        <p>&copy; 2026 Instituto Esperança.</p>
+
+    </div>
+</footer>
+
+</body>
+</html>
